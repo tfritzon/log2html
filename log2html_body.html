@@ -1,0 +1,33 @@
+  </head>
+
+  <body onKeyUp="key(event);" onLoad="_init();">
+    <div class="header">
+      <div class="title"> @title </div>
+      <div class="instr">
+	Select any text and press c to attach a comment, or a to annotate with one of the colors.
+      </div>
+      <div class="shortcuts">
+	Keyboard
+	Shortcuts: <b>c</b>=comment, <b>a</b>=annotate,
+                   <b>n</b>=new annotation type
+      </div>
+      <div class="legend" id="leg">Legend: 
+	<span class="def">&#9635; default</span>
+      </div>
+      <div class="comment">
+        <textarea cols="40" rows="4" name="comment" id="cmnt"></textarea><br />
+        <input type="button" value="Comment" onClick="setComment();" /><br />
+        <div class="links"><ul id="list" onClick="jump(event);"></ul></div>
+      </div>
+    </div>
+    <div onClick="pickColor(event);" id="colpick">
+      <div class="cpinner">
+      <table id="colmap">
+      </table>
+      Color: <span id="colval"></span><br />
+      Label:<br /><input type="text" id="catlbl"><br />
+      <input type="button" value="save" onClick="saveCategory();">
+      </div>
+    </div>
+
+    

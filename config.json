@@ -1,0 +1,27 @@
+{
+  "categories" : [
+    { "label": "marker",
+      "style": "color: white; background: #f00;",
+      "regex": "[-]{30}"
+    },
+    { "label": "bootloader",
+      "style": "color: #70ffff;",
+      "regex": "^.*[Bb]oot",
+      "fallb": "bootloader"
+    },
+    { "label": "kernel",
+      "style": "color: #8fff1f;",
+      "regex": "^[0-9]{4}(-[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}\\.[0-9]{6} \\[[ ]*[0-9]+\\.[0-9]+",
+      "fallb": "syslog"
+    },
+    { "label": "syslog",
+      "style": "color: #ffdb70;",
+      "regex": "^$"
+    },
+    { "label": "error",
+      "style": "color: #ff1f1f;",
+      "regex": "(error|Error|ERROR|failed|Failed|timeout|Timeout)"
+    }
+  ],
+  "ts-extract-regex" : "^[0-9]{2,4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9.]+"
+}
