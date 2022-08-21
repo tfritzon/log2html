@@ -4,7 +4,7 @@ log2html: log2html.scm log2html_head.html log2html_body.html log2html.css log2ht
 	raco exe $<
 
 example: rpi_boot_example.log
-	./log2html $< > bootlog.html
+	./log2html -l $< > bootlog.html
 
 clean:
 	rm -f log2html bootlog.html *~
