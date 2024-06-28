@@ -16,7 +16,7 @@ function walkSel(sel, f, x) {
     if (sel.rangeCount < 1) return;
     
     start = sel.anchorNode.parentElement;
-    end = sel.extentNode.parentElement;
+    end = sel.focusNode.parentElement;
 
     walk(start, end, f, x);
 }
